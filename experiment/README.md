@@ -1,0 +1,5 @@
+# Auditory Oddball
+
+A simple auditory oddball paradigm for eliciting a mismatch negativity or a P300 is found in `mmn.py`. It can be run by setting this folder as your working directory, installing the packages in `environment.yml` (which can be done easily with [Anaconda](https://www.anaconda.com/products/individual)), and typing `python mmn.py` into Terminal. 
+
+`RTBox.py` and `serFTDI.py` provide the API for [RTBox](https://lobes.osu.edu/rt-box.php), which we use to send TTL triggers to the EEG amp. (The TTL-out on the RTBox hardware simply needs to be plugged into the digital input / trigger port on your EEG amp.) This is a friendly-ish, cheap-ish, EEG-manufacturer-agnostic way of marking event times. For best timing, you should clone the [RTBox repository](https://github.com/xiangruili/RTBox_py) and follow the [instructions](https://github.com/xiangruili/RTBox_py/tree/master/doc) for installing the FTDI driver on your platform. Otherwise, RTBox can be operated over a USB-to-serial port.  
